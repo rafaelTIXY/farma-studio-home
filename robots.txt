@@ -1,0 +1,3 @@
+# Εσωτερικά εργαλεία της Farma of Rhodes: όχι στις μηχανές αναζήτησης.
+User-agent: *
+Disallow: /
