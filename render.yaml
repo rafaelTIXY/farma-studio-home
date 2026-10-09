@@ -1,0 +1,25 @@
+# farma-studio.com: αρχική σελίδα (Animal Rules / Diorasis). Static site, χωρίς build.
+# Render → New → Blueprint → αυτό το repo. Μετά: Settings → Custom Domains → farma-studio.com και www.farma-studio.com.
+services:
+  - type: web
+    name: farma-studio-home
+    runtime: static
+    branch: main
+    buildCommand: ""
+    staticPublishPath: .
+    headers:
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+      - path: /*
+        name: X-Frame-Options
+        value: DENY
+      - path: /*
+        name: Referrer-Policy
+        value: strict-origin-when-cross-origin
+      - path: /*
+        name: Content-Security-Policy
+        value: "default-src 'none'; style-src 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'"
+      - path: /*
+        name: X-Robots-Tag
+        value: noindex, nofollow
