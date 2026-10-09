@@ -7,6 +7,10 @@ services:
     branch: main
     buildCommand: ""
     staticPublishPath: .
+    routes:
+      - type: rewrite
+        source: /privacy
+        destination: /privacy.html
     headers:
       - path: /*
         name: X-Content-Type-Options
